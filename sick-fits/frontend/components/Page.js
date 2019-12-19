@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
 import Header from '../components/Header';
 import Meta from '../components/Meta';
@@ -11,6 +11,7 @@ const theme = {
   lightgrey: '#E1E1E1',
   offWhite: '#EDEDED',
   maxWidth: '1000px',
+  // Box shadow
   bs: '0 12px 24px 0 rgba(0, 0, 0, 0.09)'
 };
 
@@ -28,11 +29,13 @@ const Inner = styled.div`
 export default class Page extends Component {
   render() {
     return (
-      <StyledPage>
-        <Meta />
-        <Header />
-        <Inner>{this.props.children}</Inner>
-      </StyledPage>
+      <ThemeProvider theme={theme} >
+        <StyledPage>
+          <Meta />
+          <Header />
+          <Inner>{this.props.children}</Inner>
+        </StyledPage>
+      </ThemeProvider>
     )
   }
 }
