@@ -15,6 +15,10 @@ const Logo = styled.h1`
     text-transform: uppercase;
     text-decoration: none;
   }
+  @media (max-width: 1300px) {
+    margin: 0;
+    text-align: center;
+  }
 `;
 
 const Header = () => (
