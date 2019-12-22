@@ -36,6 +36,7 @@ injectGlobal`
     box-sizing: inherit;
   }
   body {
+    font-family: 'radnika_next';
     padding: 0;
     margin: 0;
     font-size: 1.5rem;
