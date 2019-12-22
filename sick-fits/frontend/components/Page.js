@@ -20,7 +20,7 @@ const StyledPage = styled.div`
   color: ${props => props.theme.black};
 `;
 
-// You can call injectGlobal anywhere in your application and it's gonna inject the global css. Don't forget that this is global CSS so you need the selectors.
+// You can call injectGlobal anywhere in your application and it's gonna inject the global css. Don't forget that this is global CSS so you need the selectors. Selectors here don't have access to props.theme because we're not inside the ThemeProvider, but we still have access to the theme object.
 injectGlobal`
   @font-face {
     font-family: 'radnika_next';
@@ -41,6 +41,10 @@ injectGlobal`
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
+  }
+  a {
+    text-decoration: none;
+    color: ${theme.black};
   }
 `;
 
