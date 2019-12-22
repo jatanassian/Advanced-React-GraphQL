@@ -22,6 +22,12 @@ const StyledPage = styled.div`
 
 // You can call injectGlobal anywhere in your application and it's gonna inject the global css. Don't forget that this is global CSS so you need the selectors.
 injectGlobal`
+  @font-face {
+    font-family: 'radnika_next';
+    src: url('/static/radnikanext-medium-webfont.woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
   html {
     box-sizing: border-box;
     font-size: 10px;
