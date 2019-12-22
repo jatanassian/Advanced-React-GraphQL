@@ -20,6 +20,23 @@ const StyledPage = styled.div`
   color: ${props => props.theme.black};
 `;
 
+// You can call injectGlobal anywhere in your application and it's gonna inject the global css. Don't forget that this is global CSS so you need the selectors.
+injectGlobal`
+  html {
+    box-sizing: border-box;
+    font-size: 10px;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+`;
+
 const Inner = styled.div`
   max-width: ${props => props.theme.maxWidth};
   margin: 0 auto;
