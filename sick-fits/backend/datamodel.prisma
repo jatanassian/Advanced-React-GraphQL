@@ -5,7 +5,7 @@ type User {
 }
 
 type Item {
-  id: ID! @unique
+  id: ID! @id
   title: String!
   description: String!
   image: String
